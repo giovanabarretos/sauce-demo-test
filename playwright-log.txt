@@ -1,0 +1,164 @@
+{"level":30,"time":"2024-10-27T20:34:37.922Z","pid":14052,"hostname":"DellG5","msg":"Listening on 64718"}
+(node:14052) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-10-27T20:34:38.512Z","pid":14052,"hostname":"DellG5","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-10-27T20:34:39.391Z","pid":14052,"hostname":"DellG5","msg":"Adding browser to stack: chromium, version: 130.0.6723.31"}
+{"level":30,"time":"2024-10-27T20:34:39.392Z","pid":14052,"hostname":"DellG5","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-10-27T20:34:39.392Z","pid":14052,"hostname":"DellG5","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-10-27T20:34:39.400Z","pid":14052,"hostname":"DellG5","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-10-27T20:34:39.400Z","pid":14052,"hostname":"DellG5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-10-27T20:34:39.400Z","pid":14052,"hostname":"DellG5","msg":"Trace file: "}
+{"level":30,"time":"2024-10-27T20:34:39.421Z","pid":14052,"hostname":"DellG5","msg":"Changed active context"}
+{"level":30,"time":"2024-10-27T20:34:39.421Z","pid":14052,"hostname":"DellG5","msg":"End of node method newContext"}
+{"level":30,"time":"2024-10-27T20:34:39.427Z","pid":14052,"hostname":"DellG5","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-10-27T20:34:39.427Z","pid":14052,"hostname":"DellG5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-10-27T20:34:39.940Z","pid":14052,"hostname":"DellG5","msg":"Video path: undefined"}
+{"level":30,"time":"2024-10-27T20:34:39.940Z","pid":14052,"hostname":"DellG5","msg":"Changed active page"}
+{"level":30,"time":"2024-10-27T20:34:41.752Z","pid":14052,"hostname":"DellG5","msg":"End of node method newPage"}
+{"level":30,"time":"2024-10-27T20:34:41.756Z","pid":14052,"hostname":"DellG5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:41.756Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"user-name\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:41.796Z","pid":14052,"hostname":"DellG5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:41.799Z","pid":14052,"hostname":"DellG5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:41.799Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"password\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:41.814Z","pid":14052,"hostname":"DellG5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:41.817Z","pid":14052,"hostname":"DellG5","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.817Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"login-button\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:41.888Z","pid":14052,"hostname":"DellG5","msg":"End of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.891Z","pid":14052,"hostname":"DellG5","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.891Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with (//div[@class=\"inventory_item\"])[1] in page."}
+{"level":30,"time":"2024-10-27T20:34:41.920Z","pid":14052,"hostname":"DellG5","msg":"End of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.923Z","pid":14052,"hostname":"DellG5","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.923Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //div[@id=\"shopping_cart_container\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:41.949Z","pid":14052,"hostname":"DellG5","msg":"End of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.952Z","pid":14052,"hostname":"DellG5","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.952Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //button[@id=\"checkout\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:41.976Z","pid":14052,"hostname":"DellG5","msg":"End of node method click"}
+{"level":30,"time":"2024-10-27T20:34:41.980Z","pid":14052,"hostname":"DellG5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:41.980Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"first-name\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:41.988Z","pid":14052,"hostname":"DellG5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:41.990Z","pid":14052,"hostname":"DellG5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:41.990Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"last-name\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:42.010Z","pid":14052,"hostname":"DellG5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:42.012Z","pid":14052,"hostname":"DellG5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:42.013Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"postal-code\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:42.023Z","pid":14052,"hostname":"DellG5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:42.027Z","pid":14052,"hostname":"DellG5","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-27T20:34:42.027Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"continue\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:42.055Z","pid":14052,"hostname":"DellG5","msg":"End of node method click"}
+{"level":30,"time":"2024-10-27T20:34:42.058Z","pid":14052,"hostname":"DellG5","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-27T20:34:42.058Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //button[@id=\"finish\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:42.083Z","pid":14052,"hostname":"DellG5","msg":"End of node method click"}
+{"level":30,"time":"2024-10-27T20:34:42.086Z","pid":14052,"hostname":"DellG5","msg":"Start of node method focus"}
+{"level":30,"time":"2024-10-27T20:34:42.086Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //div[@id=\"checkout_complete_container\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:42.092Z","pid":14052,"hostname":"DellG5","msg":"End of node method focus"}
+{"level":30,"time":"2024-10-27T20:34:42.095Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.097Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.100Z","pid":14052,"hostname":"DellG5","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:42.100Z","pid":14052,"hostname":"DellG5","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:42.101Z","pid":14052,"hostname":"DellG5","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:42.102Z","pid":14052,"hostname":"DellG5","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:42.104Z","pid":14052,"hostname":"DellG5","msg":"Changing current active page: page=ad35e6e4-7cb6-4867-a6b8-c206f0c6be2e"}
+{"level":30,"time":"2024-10-27T20:34:42.104Z","pid":14052,"hostname":"DellG5","msg":"Changed active page"}
+{"level":30,"time":"2024-10-27T20:34:42.106Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.107Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.109Z","pid":14052,"hostname":"DellG5","msg":"Changed active context"}
+{"level":30,"time":"2024-10-27T20:34:42.109Z","pid":14052,"hostname":"DellG5","msg":"Changing current active page: page=ad35e6e4-7cb6-4867-a6b8-c206f0c6be2e"}
+{"level":30,"time":"2024-10-27T20:34:42.109Z","pid":14052,"hostname":"DellG5","msg":"Changed active page"}
+{"level":30,"time":"2024-10-27T20:34:42.110Z","pid":14052,"hostname":"DellG5","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-10-27T20:34:42.124Z","pid":14052,"hostname":"DellG5","msg":"Removed page=1105bb2f-d0fa-4e95-8f92-bd4e419c50e3 from context=4a6fd388-4be0-4164-920f-677014d4b3c4 page stack"}
+{"level":30,"time":"2024-10-27T20:34:42.160Z","pid":14052,"hostname":"DellG5","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-10-27T20:34:42.165Z","pid":14052,"hostname":"DellG5","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2024-10-27T20:34:42.362Z","pid":14052,"hostname":"DellG5","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:10982:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:11598:59)
+    at PlaywrightServer.setTimeout (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:11837:57)
+    at Object.onReceiveHalfClose (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-10-27T20:34:42.379Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.379Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.381Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.381Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:42.383Z","pid":14052,"hostname":"DellG5","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-10-27T20:34:42.695Z","pid":14052,"hostname":"DellG5","msg":"Adding browser to stack: chromium, version: 130.0.6723.31"}
+{"level":30,"time":"2024-10-27T20:34:42.695Z","pid":14052,"hostname":"DellG5","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-10-27T20:34:42.695Z","pid":14052,"hostname":"DellG5","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-10-27T20:34:42.699Z","pid":14052,"hostname":"DellG5","msg":"Start of node method newContext"}
+{"level":30,"time":"2024-10-27T20:34:42.699Z","pid":14052,"hostname":"DellG5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-10-27T20:34:42.699Z","pid":14052,"hostname":"DellG5","msg":"Trace file: "}
+{"level":30,"time":"2024-10-27T20:34:42.707Z","pid":14052,"hostname":"DellG5","msg":"Changed active context"}
+{"level":30,"time":"2024-10-27T20:34:42.707Z","pid":14052,"hostname":"DellG5","msg":"End of node method newContext"}
+{"level":30,"time":"2024-10-27T20:34:42.711Z","pid":14052,"hostname":"DellG5","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-10-27T20:34:42.711Z","pid":14052,"hostname":"DellG5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-10-27T20:34:43.203Z","pid":14052,"hostname":"DellG5","msg":"Video path: undefined"}
+{"level":30,"time":"2024-10-27T20:34:43.203Z","pid":14052,"hostname":"DellG5","msg":"Changed active page"}
+{"level":30,"time":"2024-10-27T20:34:44.810Z","pid":14052,"hostname":"DellG5","msg":"End of node method newPage"}
+{"level":30,"time":"2024-10-27T20:34:44.815Z","pid":14052,"hostname":"DellG5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:44.815Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"user-name\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:44.888Z","pid":14052,"hostname":"DellG5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:44.891Z","pid":14052,"hostname":"DellG5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:44.892Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"password\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:44.905Z","pid":14052,"hostname":"DellG5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-10-27T20:34:44.907Z","pid":14052,"hostname":"DellG5","msg":"Start of node method click"}
+{"level":30,"time":"2024-10-27T20:34:44.907Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //input[@id=\"login-button\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:44.945Z","pid":14052,"hostname":"DellG5","msg":"End of node method click"}
+{"level":30,"time":"2024-10-27T20:34:44.947Z","pid":14052,"hostname":"DellG5","msg":"Start of node method focus"}
+{"level":30,"time":"2024-10-27T20:34:44.947Z","pid":14052,"hostname":"DellG5","msg":"Strict mode is enabled, find Locator with //button[@class=\"error-button\"] in page."}
+{"level":30,"time":"2024-10-27T20:34:44.953Z","pid":14052,"hostname":"DellG5","msg":"End of node method focus"}
+{"level":30,"time":"2024-10-27T20:34:44.955Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:44.956Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:44.958Z","pid":14052,"hostname":"DellG5","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:44.958Z","pid":14052,"hostname":"DellG5","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:44.959Z","pid":14052,"hostname":"DellG5","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:44.960Z","pid":14052,"hostname":"DellG5","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-10-27T20:34:44.961Z","pid":14052,"hostname":"DellG5","msg":"Changing current active page: page=bfd7b029-1ccb-4ee0-9a88-416220b1eea6"}
+{"level":30,"time":"2024-10-27T20:34:44.961Z","pid":14052,"hostname":"DellG5","msg":"Changed active page"}
+{"level":30,"time":"2024-10-27T20:34:44.964Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:44.965Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:44.967Z","pid":14052,"hostname":"DellG5","msg":"Changed active context"}
+{"level":30,"time":"2024-10-27T20:34:44.967Z","pid":14052,"hostname":"DellG5","msg":"Changing current active page: page=bfd7b029-1ccb-4ee0-9a88-416220b1eea6"}
+{"level":30,"time":"2024-10-27T20:34:44.967Z","pid":14052,"hostname":"DellG5","msg":"Changed active page"}
+{"level":30,"time":"2024-10-27T20:34:44.969Z","pid":14052,"hostname":"DellG5","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-10-27T20:34:44.979Z","pid":14052,"hostname":"DellG5","msg":"Removed page=581a986b-36b7-4bd2-8d0d-45061254d52b from context=279b126c-761b-45a1-9cb3-681abded248f page stack"}
+{"level":30,"time":"2024-10-27T20:34:45.015Z","pid":14052,"hostname":"DellG5","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-10-27T20:34:45.019Z","pid":14052,"hostname":"DellG5","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2024-10-27T20:34:45.247Z","pid":14052,"hostname":"DellG5","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:10982:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:11598:59)
+    at PlaywrightServer.setTimeout (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:11837:57)
+    at Object.onReceiveHalfClose (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-10-27T20:34:45.251Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:45.251Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:10982:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:11598:59)
+    at PlaywrightServer.setTimeout (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js:11837:57)
+    at Object.onReceiveHalfClose (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2024-10-27T20:34:45.256Z","pid":14052,"hostname":"DellG5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:45.256Z","pid":14052,"hostname":"DellG5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-10-27T20:34:45.288Z","pid":14052,"hostname":"DellG5","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-10-27T20:34:45.288Z","pid":14052,"hostname":"DellG5","msg":"End of node method closeAllBrowsers"}
