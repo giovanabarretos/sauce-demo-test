@@ -1,464 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-10-27T23:21:00.838836" rpa="false" schemaversion="5">
-<suite id="s1" name="Sauce-Demo" source="C:\projects\sauce-demo-test\sauce-demo-test\sauce-demo.robot">
-<test id="s1-t1" name="Log into Sauce Demo and buy one item" line="39">
-<kw name="Given Sauce Demo is open">
-<kw name="New Browser" owner="Browser">
-<msg time="2024-10-27T23:21:00.964555" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\projects\\sauce-demo-test\\sauce-demo-test\\browser\\traces\\763388ac-c58d-4c15-b337-b147ffac398c"}</msg>
-<msg time="2024-10-27T23:21:00.998783" level="INFO">Starting Browser process C:\Users\giova\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js using port 63604</msg>
-<msg time="2024-10-27T23:21:00.998783" level="INFO">Node startup parameters: ['node', 'C:\\Users\\giova\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\Browser\\wrapper\\index.js', '63604']</msg>
-<msg time="2024-10-27T23:21:02.134311" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\projects\\sauce-demo-test\\sauce-demo-test\\browser\\traces\\763388ac-c58d-4c15-b337-b147ffac398c"}</msg>
-<arg>browser=${BROWSER}</arg>
-<arg>headless=${HEADLESS}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-10-27T23:21:00.964555" elapsed="1.169756"/>
+<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-10-28T11:35:16.235973" rpa="false" schemaversion="5">
+<suite id="s1" name="Api-Test" source="C:\projects\sauce-demo-test\sauce-demo-test\Tests\api-test.robot">
+<test id="s1-t1" name="Access the Activities API" line="10">
+<kw name="Access API and check ID field" owner="check-api">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-10-28T11:35:16.314656" level="INFO">${body} = {}</msg>
+<var>${body}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-10-28T11:35:16.314656" elapsed="0.000000"/>
 </kw>
-<kw name="New Context" owner="Browser">
-<msg time="2024-10-27T23:21:02.134311" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "locale": "en-GB",
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2024-10-27T23:21:02.165957" level="INFO">Successfully created context. </msg>
-<msg time="2024-10-27T23:21:02.165957" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'locale': 'en-GB', 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<arg>locale=en-GB</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2024-10-27T23:21:02.134311" elapsed="0.031646"/>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2024-10-28T11:35:17.346627" level="INFO">GET Request : url=https://fakerestapi.azurewebsites.net/api/v1/Activities 
+ path_url=/api/v1/Activities 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2024-10-28T11:35:17.346627" level="INFO">GET Response : url=https://fakerestapi.azurewebsites.net/api/v1/Activities 
+ status=200, reason=OK 
+ headers={'Content-Type': 'application/json; charset=utf-8; v=1.0', 'Date': 'Mon, 28 Oct 2024 14:35:09 GMT', 'Server': 'Kestrel', 'Transfer-Encoding': 'chunked', 'api-supported-versions': '1.0'} 
+ body=[{"id":1,"title":"Activity 1","dueDate":"2024-10-28T15:35:09.483131+00:00","completed":false},{"id":2,"title":"Activity 2","dueDate":"2024-10-28T16:35:09.4831337+00:00","completed":true},{"id":3,"title":"Activity 3","dueDate":"2024-10-28T17:35:09.4831341+00:00","completed":false},{"id":4,"title":"Activity 4","dueDate":"2024-10-28T18:35:09.4831343+00:00","completed":true},{"id":5,"title":"Activity 5","dueDate":"2024-10-28T19:35:09.4831346+00:00","completed":false},{"id":6,"title":"Activity 6","dueDate":"2024-10-28T20:35:09.4831353+00:00","completed":true},{"id":7,"title":"Activity 7","dueDate":"2024-10-28T21:35:09.4831358+00:00","completed":false},{"id":8,"title":"Activity 8","dueDate":"2024-10-28T22:35:09.483136+00:00","completed":true},{"id":9,"title":"Activity 9","dueDate":"2024-10-28T23:35:09.4831363+00:00","completed":false},{"id":10,"title":"Activity 10","dueDate":"2024-10-29T00:35:09.4831368+00:00","completed":true},{"id":11,"title":"Activity 11","dueDate":"2024-10-29T01:35:09.4831372+00:00","completed":false},{"id":12,"title":"Activity 12","dueDate":"2024-10-29T02:35:09.4831374+00:00","completed":true},{"id":13,"title":"Activity 13","dueDate":"2024-10-29T03:35:09.4831377+00:00","completed":false},{"id":14,"title":"Activity 14","dueDate":"2024-10-29T04:35:09.483138+00:00","completed":true},{"id":15,"title":"Activity 15","dueDate":"2024-10-29T05:35:09.4831383+00:00","completed":false},{"id":16,"title":"Activity 16","dueDate":"2024-10-29T06:35:09.4831386+00:00","completed":true},{"id":17,"title":"Activity 17","dueDate":"2024-10-29T07:35:09.4831388+00:00","completed":false},{"id":18,"title":"Activity 18","dueDate":"2024-10-29T08:35:09.4831392+00:00","completed":true},{"id":19,"title":"Activity 19","dueDate":"2024-10-29T09:35:09.4831395+00:00","completed":false},{"id":20,"title":"Activity 20","dueDate":"2024-10-29T10:35:09.4831398+00:00","completed":true},{"id":21,"title":"Activity 21","dueDate":"2024-10-29T11:35:09.48314+00:00","completed":false},{"id":22,"title":"Activity 22","dueDate":"2024-10-29T12:35:09.4831403+00:00","completed":true},{"id":23,"title":"Activity 23","dueDate":"2024-10-29T13:35:09.4831406+00:00","completed":false},{"id":24,"title":"Activity 24","dueDate":"2024-10-29T14:35:09.4831409+00:00","completed":true},{"id":25,"title":"Activity 25","dueDate":"2024-10-29T15:35:09.4831411+00:00","completed":false},{"id":26,"title":"Activity 26","dueDate":"2024-10-29T16:35:09.4831414+00:00","completed":true},{"id":27,"title":"Activity 27","dueDate":"2024-10-29T17:35:09.4831417+00:00","completed":false},{"id":28,"title":"Activity 28","dueDate":"2024-10-29T18:35:09.483142+00:00","completed":true},{"id":29,"title":"Activity 29","dueDate":"2024-10-29T19:35:09.4831423+00:00","completed":false},{"id":30,"title":"Activity 30","dueDate":"2024-10-29T20:35:09.4831425+00:00","completed":true}] 
+ </msg>
+<msg time="2024-10-28T11:35:17.346627" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${URL_API}</arg>
+<arg>${body}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2024-10-28T11:35:16.314656" elapsed="1.031971"/>
 </kw>
-<kw name="New Page" owner="Browser">
-<msg time="2024-10-27T23:21:03.906515" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
-<arg>https://www.saucedemo.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2024-10-27T23:21:02.165957" elapsed="1.740558"/>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-27T23:21:00.964555" elapsed="2.941960"/>
+<for flavor="IN">
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
 </kw>
-<kw name="And I login into system">
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:03.907584" level="INFO">Fills the text 'standard_user' in the given field.</msg>
-<arg>${Login_Username}</arg>
-<arg>${user}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:03.907584" elapsed="0.039603"/>
+<var name="${id}">{'id': 1, 'title': 'Activity 1', 'dueDate': '2024-10-28T15:35:09.483131+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:03.947187" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
-<arg>${Login_Password}</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:03.947187" elapsed="0.014541"/>
+<var name="${id}">{'id': 2, 'title': 'Activity 2', 'dueDate': '2024-10-28T16:35:09.4831337+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:03.961728" level="INFO">Clicks the element 'id=login-button'.</msg>
-<arg>${Login_Button}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:03.961728" elapsed="0.070746"/>
+<var name="${id}">{'id': 3, 'title': 'Activity 3', 'dueDate': '2024-10-28T17:35:09.4831341+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
 </kw>
-<arg>${STANDART_USER}</arg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-10-27T23:21:03.907584" elapsed="0.125889"/>
+<var name="${id}">{'id': 4, 'title': 'Activity 4', 'dueDate': '2024-10-28T18:35:09.4831343+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="When I add 1 item to the cart">
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:04.034486" level="INFO">Clicks the element '(//div[@class="inventory_item"])[1]'.</msg>
-<arg>${Inventory_First_Item}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.033473" elapsed="0.029684"/>
+<var name="${id}">{'id': 5, 'title': 'Activity 5', 'dueDate': '2024-10-28T19:35:09.4831346+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-27T23:21:04.033473" elapsed="0.029684"/>
+<var name="${id}">{'id': 6, 'title': 'Activity 6', 'dueDate': '2024-10-28T20:35:09.4831353+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="And I checkout the item">
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:04.063157" level="INFO">Clicks the element 'id=shopping_cart_container'.</msg>
-<arg>${Shopping_Cart}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.063157" elapsed="0.054705"/>
+<var name="${id}">{'id': 7, 'title': 'Activity 7', 'dueDate': '2024-10-28T21:35:09.4831358+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:04.120152" level="INFO">Clicks the element 'id=checkout'.</msg>
-<arg>${Checkout_Button}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.117862" elapsed="0.022490"/>
+<var name="${id}">{'id': 8, 'title': 'Activity 8', 'dueDate': '2024-10-28T22:35:09.483136+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-27T23:21:04.063157" elapsed="0.077195"/>
+<var name="${id}">{'id': 9, 'title': 'Activity 9', 'dueDate': '2024-10-28T23:35:09.4831363+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="And I fill the buyer information">
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:04.140352" level="INFO">Fills the text 'Giovana' in the given field.</msg>
-<arg>${Input_FirstName}</arg>
-<arg>${firstname}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.140352" elapsed="0.013035"/>
+<var name="${id}">{'id': 10, 'title': 'Activity 10', 'dueDate': '2024-10-29T00:35:09.4831368+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:04.153387" level="INFO">Fills the text 'Silva' in the given field.</msg>
-<arg>${Input_LastName}</arg>
-<arg>${lastname}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.153387" elapsed="0.021641"/>
+<var name="${id}">{'id': 11, 'title': 'Activity 11', 'dueDate': '2024-10-29T01:35:09.4831372+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:04.175464" level="INFO">Fills the text '80200-100' in the given field.</msg>
-<arg>${PostalCode}</arg>
-<arg>${ZIPCODE}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.175294" elapsed="0.013678"/>
+<var name="${id}">{'id': 12, 'title': 'Activity 12', 'dueDate': '2024-10-29T02:35:09.4831374+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:04.189972" level="INFO">Clicks the element 'id=continue'.</msg>
-<arg>${Information_Submit}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.188972" elapsed="0.031328"/>
+<var name="${id}">{'id': 13, 'title': 'Activity 13', 'dueDate': '2024-10-29T03:35:09.4831377+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<arg>${FIRSTNAME}</arg>
-<arg>${LASTNAME}</arg>
-<status status="PASS" start="2024-10-27T23:21:04.140352" elapsed="0.079948"/>
+<var name="${id}">{'id': 14, 'title': 'Activity 14', 'dueDate': '2024-10-29T04:35:09.483138+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="And I finish the checkout process">
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:04.221354" level="INFO">Clicks the element 'id=finish'.</msg>
-<arg>${Finish}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.221354" elapsed="0.026453"/>
+<var name="${id}">{'id': 15, 'title': 'Activity 15', 'dueDate': '2024-10-29T05:35:09.4831383+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-27T23:21:04.221354" elapsed="0.026453"/>
+<var name="${id}">{'id': 16, 'title': 'Activity 16', 'dueDate': '2024-10-29T06:35:09.4831386+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="Then I see a confirmation message">
-<kw name="Focus" owner="Browser">
-<arg>${Checkout_Container}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves focus on to the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.247807" elapsed="0.010335"/>
+<var name="${id}">{'id': 17, 'title': 'Activity 17', 'dueDate': '2024-10-29T07:35:09.4831388+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-27T23:21:04.247807" elapsed="0.010335"/>
+<var name="${id}">{'id': 18, 'title': 'Activity 18', 'dueDate': '2024-10-29T08:35:09.4831392+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="And end test">
-<kw name="Close Context" owner="Browser">
-<msg time="2024-10-27T23:21:04.264141" level="INFO">Switching browser to CURRENT</msg>
-<msg time="2024-10-27T23:21:04.266142" level="INFO">Returned active browser id. CURRENT</msg>
-<msg time="2024-10-27T23:21:04.266142" level="INFO">Switching browser to browser=53b50afc-dd5c-4101-81a7-01d8923245c2</msg>
-<msg time="2024-10-27T23:21:04.268143" level="INFO">Successfully changed active browser: browser=53b50afc-dd5c-4101-81a7-01d8923245c2</msg>
-<msg time="2024-10-27T23:21:04.268143" level="INFO">Switching context to CURRENT in CURRENT</msg>
-<msg time="2024-10-27T23:21:04.269151" level="INFO">Returned active context id: CURRENT</msg>
-<msg time="2024-10-27T23:21:04.270142" level="INFO">Switching context to context=4df57737-c89b-4373-9802-46d53415b6c1 in CURRENT</msg>
-<msg time="2024-10-27T23:21:04.275141" level="INFO">Successfully changed active context: context=4df57737-c89b-4373-9802-46d53415b6c1</msg>
-<msg time="2024-10-27T23:21:04.311163" level="INFO">Successfully closed Context</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes a Context.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.259147" elapsed="0.052016"/>
+<var name="${id}">{'id': 19, 'title': 'Activity 19', 'dueDate': '2024-10-29T09:35:09.4831395+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<kw name="Close Browser" owner="Browser">
-<msg time="2024-10-27T23:21:04.518247" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.311163" elapsed="0.207084"/>
+<var name="${id}">{'id': 20, 'title': 'Activity 20', 'dueDate': '2024-10-29T10:35:09.4831398+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-27T23:21:04.259147" elapsed="0.259100"/>
+<var name="${id}">{'id': 21, 'title': 'Activity 21', 'dueDate': '2024-10-29T11:35:09.48314+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
 </kw>
-<doc>This test case open Sauce Demo, logs in, adds the first inventory list item into cart and checkout the item.</doc>
-<status status="PASS" start="2024-10-27T23:21:00.964555" elapsed="3.553692"/>
+<var name="${id}">{'id': 22, 'title': 'Activity 22', 'dueDate': '2024-10-29T12:35:09.4831403+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 23, 'title': 'Activity 23', 'dueDate': '2024-10-29T13:35:09.4831406+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 24, 'title': 'Activity 24', 'dueDate': '2024-10-29T14:35:09.4831409+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 25, 'title': 'Activity 25', 'dueDate': '2024-10-29T15:35:09.4831411+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 26, 'title': 'Activity 26', 'dueDate': '2024-10-29T16:35:09.4831414+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 27, 'title': 'Activity 27', 'dueDate': '2024-10-29T17:35:09.4831417+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 28, 'title': 'Activity 28', 'dueDate': '2024-10-29T18:35:09.483142+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 29, 'title': 'Activity 29', 'dueDate': '2024-10-29T19:35:09.4831423+00:00', 'completed': False}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<iter>
+<kw name="Exit For Loop If" owner="BuiltIn">
+<arg>${id}[id] == None</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</kw>
+<var name="${id}">{'id': 30, 'title': 'Activity 30', 'dueDate': '2024-10-29T20:35:09.4831425+00:00', 'completed': True}</var>
+<status status="PASS" start="2024-10-28T11:35:17.355721" elapsed="0.000000"/>
+</iter>
+<var>${id}</var>
+<value>@{response.json()}</value>
+<status status="PASS" start="2024-10-28T11:35:17.346627" elapsed="0.009094"/>
+</for>
+<status status="PASS" start="2024-10-28T11:35:16.314656" elapsed="1.041065"/>
+</kw>
+<status status="PASS" start="2024-10-28T11:35:16.314656" elapsed="1.041065"/>
 </test>
-<test id="s1-t2" name="Try to log into Sauce Demo with invalid credentials" line="50">
-<kw name="Given Sauce Demo is open">
-<kw name="New Browser" owner="Browser">
-<msg time="2024-10-27T23:21:04.544780" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\projects\\sauce-demo-test\\sauce-demo-test\\browser\\traces\\1f5aa263-73b3-4bcd-8dcf-83455df3f996"}</msg>
-<msg time="2024-10-27T23:21:04.709269" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\projects\\sauce-demo-test\\sauce-demo-test\\browser\\traces\\1f5aa263-73b3-4bcd-8dcf-83455df3f996"}</msg>
-<arg>browser=${BROWSER}</arg>
-<arg>headless=${HEADLESS}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.544517" elapsed="0.164752"/>
-</kw>
-<kw name="New Context" owner="Browser">
-<msg time="2024-10-27T23:21:04.709269" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "locale": "en-GB",
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2024-10-27T23:21:04.730238" level="INFO">Successfully created context. </msg>
-<msg time="2024-10-27T23:21:04.730238" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'locale': 'en-GB', 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<arg>locale=en-GB</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.709269" elapsed="0.020969"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2024-10-27T23:21:06.355851" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
-<arg>https://www.saucedemo.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.730238" elapsed="1.625613"/>
-</kw>
-<status status="PASS" start="2024-10-27T23:21:04.544274" elapsed="1.811577"/>
-</kw>
-<kw name="When I login into system">
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:06.358361" level="INFO">Fills the text 'standard_user' in the given field.</msg>
-<arg>${Login_Username}</arg>
-<arg>${user}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.358361" elapsed="0.028419"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:06.387779" level="INFO">Fills the text 'wrong_password' in the given field.</msg>
-<arg>${Login_Password}</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.387779" elapsed="0.016127"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:06.403906" level="INFO">Clicks the element 'id=login-button'.</msg>
-<arg>${Login_Button}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.403906" elapsed="0.044399"/>
-</kw>
-<arg>${STANDART_USER}</arg>
-<arg>${WRONG_PASSWORD}</arg>
-<status status="PASS" start="2024-10-27T23:21:06.358361" elapsed="0.089944"/>
-</kw>
-<kw name="Then I see an error messsage">
-<kw name="Focus" owner="Browser">
-<arg>${Auth_Error}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves focus on to the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.448305" elapsed="0.012028"/>
-</kw>
-<status status="PASS" start="2024-10-27T23:21:06.448305" elapsed="0.012028"/>
-</kw>
-<kw name="And end test">
-<kw name="Close Context" owner="Browser">
-<msg time="2024-10-27T23:21:06.464712" level="INFO">Switching browser to CURRENT</msg>
-<msg time="2024-10-27T23:21:06.465711" level="INFO">Returned active browser id. CURRENT</msg>
-<msg time="2024-10-27T23:21:06.465711" level="INFO">Switching browser to browser=8462661b-fa39-4a43-99eb-eac9668aa3eb</msg>
-<msg time="2024-10-27T23:21:06.467710" level="INFO">Successfully changed active browser: browser=8462661b-fa39-4a43-99eb-eac9668aa3eb</msg>
-<msg time="2024-10-27T23:21:06.467710" level="INFO">Switching context to CURRENT in CURRENT</msg>
-<msg time="2024-10-27T23:21:06.469107" level="INFO">Returned active context id: CURRENT</msg>
-<msg time="2024-10-27T23:21:06.469353" level="INFO">Switching context to context=cac678ee-d3d3-4bcd-be85-7a9f1a6f36e4 in CURRENT</msg>
-<msg time="2024-10-27T23:21:06.473702" level="INFO">Successfully changed active context: context=cac678ee-d3d3-4bcd-be85-7a9f1a6f36e4</msg>
-<msg time="2024-10-27T23:21:06.515554" level="INFO">Successfully closed Context</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes a Context.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.461681" elapsed="0.054877"/>
-</kw>
-<kw name="Close Browser" owner="Browser">
-<msg time="2024-10-27T23:21:06.950004" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.516558" elapsed="0.433446"/>
-</kw>
-<status status="PASS" start="2024-10-27T23:21:06.461027" elapsed="0.488977"/>
-</kw>
-<doc>This test case open Sauce Demo, try to login with invalid credentials.</doc>
-<status status="PASS" start="2024-10-27T23:21:04.539734" elapsed="2.410270"/>
-</test>
-<test id="s1-t3" name="Logout" line="57">
-<kw name="Given Sauce Demo is open">
-<kw name="New Browser" owner="Browser">
-<msg time="2024-10-27T23:21:06.958526" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\projects\\sauce-demo-test\\sauce-demo-test\\browser\\traces\\6d584bf0-347f-43a9-9680-3f01f315ec15"}</msg>
-<msg time="2024-10-27T23:21:07.118622" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\projects\\sauce-demo-test\\sauce-demo-test\\browser\\traces\\6d584bf0-347f-43a9-9680-3f01f315ec15"}</msg>
-<arg>browser=${BROWSER}</arg>
-<arg>headless=${HEADLESS}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.958526" elapsed="0.160096"/>
-</kw>
-<kw name="New Context" owner="Browser">
-<msg time="2024-10-27T23:21:07.118622" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "locale": "en-GB",
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2024-10-27T23:21:07.136539" level="INFO">Successfully created context. </msg>
-<msg time="2024-10-27T23:21:07.136539" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'locale': 'en-GB', 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<arg>locale=en-GB</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2024-10-27T23:21:07.118622" elapsed="0.018920"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2024-10-27T23:21:07.754004" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
-<arg>https://www.saucedemo.com/</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2024-10-27T23:21:07.137542" elapsed="0.616462"/>
-</kw>
-<status status="PASS" start="2024-10-27T23:21:06.958526" elapsed="0.795478"/>
-</kw>
-<kw name="And I login into system">
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:07.755005" level="INFO">Fills the text 'standard_user' in the given field.</msg>
-<arg>${Login_Username}</arg>
-<arg>${user}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:07.755005" elapsed="0.027873"/>
-</kw>
-<kw name="Fill Text" owner="Browser">
-<msg time="2024-10-27T23:21:07.784272" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
-<arg>${Login_Password}</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:07.782878" elapsed="0.014725"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:07.797603" level="INFO">Clicks the element 'id=login-button'.</msg>
-<arg>${Login_Button}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:07.797603" elapsed="0.063779"/>
-</kw>
-<arg>${STANDART_USER}</arg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-10-27T23:21:07.754004" elapsed="0.107378"/>
-</kw>
-<kw name="When I logout">
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:07.862025" level="INFO">Clicks the element 'id=react-burger-menu-btn'.</msg>
-<arg>${Menu_Button}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:07.862025" elapsed="0.045065"/>
-</kw>
-<kw name="Click" owner="Browser">
-<msg time="2024-10-27T23:21:07.908089" level="INFO">Clicks the element 'id=logout_sidebar_link'.</msg>
-<arg>${Logout_Button}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:07.907090" elapsed="0.896913"/>
-</kw>
-<status status="PASS" start="2024-10-27T23:21:07.862025" elapsed="0.941978"/>
-</kw>
-<kw name="Then I see the login page">
-<kw name="Focus" owner="Browser">
-<arg>${Login_Button}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Moves focus on to the element found by ``selector``.</doc>
-<status status="PASS" start="2024-10-27T23:21:08.804003" elapsed="0.007449"/>
-</kw>
-<status status="PASS" start="2024-10-27T23:21:08.804003" elapsed="0.007449"/>
-</kw>
-<kw name="And end test">
-<kw name="Close Context" owner="Browser">
-<msg time="2024-10-27T23:21:08.816463" level="INFO">Switching browser to CURRENT</msg>
-<msg time="2024-10-27T23:21:08.818449" level="INFO">Returned active browser id. CURRENT</msg>
-<msg time="2024-10-27T23:21:08.818449" level="INFO">Switching browser to browser=2f18f507-1353-4165-95fb-8f3970755a9f</msg>
-<msg time="2024-10-27T23:21:08.819451" level="INFO">Successfully changed active browser: browser=2f18f507-1353-4165-95fb-8f3970755a9f</msg>
-<msg time="2024-10-27T23:21:08.819451" level="INFO">Switching context to CURRENT in CURRENT</msg>
-<msg time="2024-10-27T23:21:08.821450" level="INFO">Returned active context id: CURRENT</msg>
-<msg time="2024-10-27T23:21:08.822458" level="INFO">Switching context to context=82d03f84-b5b0-4f48-9817-1d662e487e6d in CURRENT</msg>
-<msg time="2024-10-27T23:21:08.843748" level="INFO">Successfully changed active context: context=82d03f84-b5b0-4f48-9817-1d662e487e6d</msg>
-<msg time="2024-10-27T23:21:08.880761" level="INFO">Successfully closed Context</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes a Context.</doc>
-<status status="PASS" start="2024-10-27T23:21:08.812451" elapsed="0.068310"/>
-</kw>
-<kw name="Close Browser" owner="Browser">
-<msg time="2024-10-27T23:21:09.352664" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-27T23:21:08.880761" elapsed="0.471903"/>
-</kw>
-<status status="PASS" start="2024-10-27T23:21:08.812451" elapsed="0.540213"/>
-</kw>
-<doc>This test case open Sauce Demo, logs in and then logs out.</doc>
-<status status="PASS" start="2024-10-27T23:21:06.958526" elapsed="2.394138"/>
-</test>
-<doc>This test suit tests Sauce Demo application.</doc>
-<status status="PASS" start="2024-10-27T23:21:00.838836" elapsed="8.513828"/>
+<doc>This test suit tests a Fake REST API</doc>
+<status status="PASS" start="2024-10-28T11:35:16.235973" elapsed="1.119748"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Sauce-Demo">Sauce-Demo</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Api-Test">Api-Test</stat>
 </suite>
 </statistics>
 <errors>
