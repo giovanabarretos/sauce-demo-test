@@ -6,7 +6,7 @@
 3. run pip install -r requirements.txt
 
 ## Sauce Demo test
-1. run robot sauce-demo-test/Test/sauce-demo.robot
+1. run robot sauce-demo-test/Tests/sauce-demo.robot
 
 ## API Test
-1. run robot sauce-demo-test/Test/api-test.robot
+1. run robot sauce-demo-test/Tests/api-test.robot
