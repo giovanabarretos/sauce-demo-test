@@ -22,9 +22,12 @@ ${ZIPCODE}    80200-100
 ${Login_Username}    //input[@id="user-name"]
 ${Login_Password}    //input[@id="password"]
 ${Login_Button}    //input[@id="login-button"]
+${Menu_Button}    //div[@class="bm-burger-button"]
+${Logout_Button}    //a[@id="logout_sidebar_link"]
 ${Auth_Error}    //button[@class="error-button"]
 ${Inventory_First_Item}    (//div[@class="inventory_item"])[1]
 ${Shopping_Cart}    //div[@id="shopping_cart_container"]
+${Filter}    //select[@class="product_sort_container"]
 ${Checkout_Button}    //button[@id="checkout"]
 ${Input_FirstName}    //input[@id="first-name"]
 ${Input_LastName}    //input[@id="last-name"]
@@ -35,7 +38,7 @@ ${Checkout_Container}    //div[@id="checkout_complete_container"]
 
 *** Test Cases ***
 Log into Sauce Demo and buy one item
-    [Documentation]    This test case open Sauce Demo, adds the first inventory list item into cart and check-out the item.
+    [Documentation]    This test case open Sauce Demo, logs in, adds the first inventory list item into cart and checkout the item.
     Given Sauce Demo is open
     And I login into system    ${STANDART_USER}    ${PASSWORD}
     When I add 1 item to the cart
@@ -52,11 +55,13 @@ Try to log into Sauce Demo with invalid credentials
     Then I see an error messsage
     And end test
 
-# TODO:Remove item from cart
-
-# TODO:Buy the cheapest item
-
-# TODO:Logout
+Logout
+    [Documentation]    This test case open Sauce Demo, logs in and then logs out.
+    Given Sauce Demo is open
+    And I login into system    ${STANDART_USER}    ${PASSWORD}
+    When I logout
+    Then I see the login page
+    And end test
 
 *** Keywords ***
 Sauce Demo is open
@@ -72,12 +77,9 @@ I login into system
 
 
 I add 1 item to the cart
-    
-    Click    ${Inventory_First_Item}  
-    #TODO:data-test verificar se o carrinho está com 1 item
+    Click    ${Inventory_First_Item}
 
 I checkout the item
-
     Click    ${Shopping_Cart}
     Click    ${Checkout_Button}
 
@@ -89,16 +91,21 @@ I fill the buyer information
     Click    ${Information_Submit} 
 
 I finish the checkout process 
-
-#TODO:check if the item is the same
     Click    ${Finish}
-
 
 I see a confirmation message
     Focus    ${Checkout_Container}
 
 I see an error messsage
     Focus    ${Auth_Error}
+
+I logout
+    Click    ${Menu_Button}
+    Click    ${Logout_Button}
+
+
+I see the login page
+    Focus    ${Login_Button}
 
 end test
     Close Context
