@@ -6,7 +6,7 @@ Resource    ../Resources/Login/Steps/login.robot
 Resource    ../Resources/Logout/Steps/logout.robot
 Resource    ../Resources/Cart/Steps/add_to_cart.robot
 Resource    ../Resources/Cart/Steps/checkout.robot
-Variables    ../Tests/common/data.py
+Variables    ../Tests/common/WEB/data.py
 
 
 *** Test Cases ***
